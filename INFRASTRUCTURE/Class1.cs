@@ -1,4 +1,4 @@
-﻿namespace DOMAIN
+﻿namespace INFRASTRUCTURE
 {
     public class Class1
     {
