@@ -1,8 +1,8 @@
 ﻿
-using DOMAIN.Entities.Adminstrators;
+using Domain.Entities.Adminstrators;
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Customers;
+namespace Domain.Entities.Customers;
 
 public class Avatar
 {

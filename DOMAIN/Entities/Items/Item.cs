@@ -1,8 +1,9 @@
 ﻿
-using Domain.Helpers.Domain;
+using Domain.Entities.Comments;
+using Domain.Helpers.Entities;
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Items;
+namespace Domain.Entities.Items;
 
 public class Item : IAggregateRoot
 {
@@ -35,6 +36,8 @@ public class Item : IAggregateRoot
     public List<Image>? Images { get; set; }
 
     public List<Subitem>? Subitems { get; set; }
+
+    public List<Comment>? Comments { get; set; }
 
 
     public int BrandID { get; set; }

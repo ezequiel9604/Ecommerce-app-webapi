@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Items;
+namespace Domain.Entities.Items;
 
 public class Image
 {

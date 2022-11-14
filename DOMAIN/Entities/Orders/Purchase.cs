@@ -1,9 +1,9 @@
 ﻿
-using DOMAIN.Entities.Customers;
-using DOMAIN.Entities.Items;
+using Domain.Entities.Customers;
+using Domain.Entities.Items;
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Orders;
+namespace Domain.Entities.Orders;
 
 public class Purchase
 {
@@ -27,7 +27,7 @@ public class Purchase
         return purchase;
     }
 
-    public PurchaseCondition? PurchaseCondition { get; set; }
+    public Return? Return { get; set; }
 
     public int SubitemID { get; set; }
     public Subitem? Subitem { get; set; }

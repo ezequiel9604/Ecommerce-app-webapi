@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Customers;
+namespace Domain.Entities.Customers;
 
 public class CreditCard
 {

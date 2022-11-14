@@ -1,5 +1,5 @@
 ﻿
-namespace Domain.Helpers.Domain;
+namespace Domain.Helpers.Entities;
 
 public interface IAggregateRoot
 {

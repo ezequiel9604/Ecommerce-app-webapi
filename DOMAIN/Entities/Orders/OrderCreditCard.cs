@@ -1,7 +1,7 @@
-﻿using DOMAIN.Entities.Customers;
+﻿using Domain.Entities.Customers;
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Orders;
+namespace Domain.Entities.Orders;
 
 public class OrderCreditCard
 {

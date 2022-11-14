@@ -1,9 +1,10 @@
 ﻿
-using Domain.Helpers.Domain;
-using DOMAIN.Entities.Customers;
+using Domain.Helpers.Entities;
+using Domain.Entities.Customers;
 using System.ComponentModel.DataAnnotations;
+using Domain.Entities.Items;
 
-namespace DOMAIN.Entities.Comments;
+namespace Domain.Entities.Comments;
 
 public class Comment : IAggregateRoot
 {
@@ -38,5 +39,7 @@ public class Comment : IAggregateRoot
     public int CustomerID { get; set; }
     public Customer? Customer { get; set; }
 
+    public int ItemID { get; set; }
+    public Item? Item { get; set; }
 
 }

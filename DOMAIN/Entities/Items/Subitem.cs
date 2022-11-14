@@ -1,8 +1,8 @@
 ﻿
-using DOMAIN.Entities.Orders;
+using Domain.Entities.Orders;
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Items;
+namespace Domain.Entities.Items;
 
 public class Subitem
 {
@@ -46,7 +46,7 @@ public class Subitem
     public Color? Color { get; set; }
 
     public int ClothSizeID { get; set; }
-    public ClothSize? ClothSize { get; set; }
+    public ClotheSize? ClothSize { get; set; }
 
     public int TechSizeID { get; set; }
     public TechSize? TechSize { get; set; }

@@ -1,8 +1,8 @@
 ﻿
-using DOMAIN.Entities.Customers;
+using Domain.Entities.Customers;
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Adminstrators;
+namespace Domain.Entities.Adminstrators;
 
 public class Chat
 {

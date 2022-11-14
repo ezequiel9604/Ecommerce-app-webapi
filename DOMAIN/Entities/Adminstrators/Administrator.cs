@@ -1,9 +1,9 @@
 ﻿
-using Domain.Helpers.Domain;
-using DOMAIN.Entities.Customers;
+using Domain.Helpers.Entities;
+using Domain.Entities.Customers;
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Adminstrators;
+namespace Domain.Entities.Adminstrators;
 
 public class Administrator : IAggregateRoot
 {

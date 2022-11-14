@@ -1,11 +1,11 @@
 ﻿
-using Domain.Helpers.Domain;
-using DOMAIN.Entities.Adminstrators;
-using DOMAIN.Entities.Comments;
-using DOMAIN.Entities.Orders;
+using Domain.Helpers.Entities;
+using Domain.Entities.Adminstrators;
+using Domain.Entities.Comments;
+using Domain.Entities.Orders;
 using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Customers;
+namespace Domain.Entities.Customers;
 
 public class Customer : IAggregateRoot
 {
@@ -35,7 +35,7 @@ public class Customer : IAggregateRoot
     [Required]
     public char? Type { get; set; } // [E]xpress or [N]ormal
 
-    public static Customer Create(int id, string firstname, string lastname, string email, 
+    public static Customer Create(int id, string firstname, string lastname, string email, char type,
         byte[] hash, byte[] salt, DateOnly birth, int avatarid)
     {
 
@@ -45,6 +45,7 @@ public class Customer : IAggregateRoot
             FirstName = firstname,
             LastName = lastname,
             Email = email,
+            Type = type,
             PasswordHash = hash,
             PasswordSalt = salt,
             DateOfBirth = birth,
@@ -54,7 +55,6 @@ public class Customer : IAggregateRoot
         return customer;
 
     }
-
 
     public List<CreditCard>? CreditCards { get; set; }
 

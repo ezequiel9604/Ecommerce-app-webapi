@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DOMAIN.Entities.Orders;
+namespace Domain.Entities.Orders;
 
 public class ShipmentMethod
 {

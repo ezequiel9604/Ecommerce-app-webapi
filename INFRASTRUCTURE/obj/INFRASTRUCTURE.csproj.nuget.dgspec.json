@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\INFRASTRUCTURE\\INFRASTRUCTURE.csproj": {}
+    "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\INFRASTRUCTURE\\INFRASTRUCTURE.csproj": {
+    "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\INFRASTRUCTURE\\INFRASTRUCTURE.csproj",
-        "projectName": "INFRASTRUCTURE",
-        "projectPath": "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\INFRASTRUCTURE\\INFRASTRUCTURE.csproj",
+        "projectUniqueName": "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Ezequiel\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ezequiel\\Desktop\\Projects\\Ecommerce_app_webapi\\INFRASTRUCTURE\\obj\\",
         "projectStyle": "PackageReference",
