@@ -5,7 +5,6 @@ namespace Domain.DTOs.Administrators;
 
 public class AdministratorDTO
 {
-
     public int ID { get; set; }
 
     public string? FullName { get; set; }
@@ -14,7 +13,8 @@ public class AdministratorDTO
 
     public string? Password { get; set; }
 
-    public static AdministratorDTO Create(int id, string fullname, string email, string password, AvatarDTO avatarDTO)
+    public static AdministratorDTO Create(int id, string fullname, string email, string password, 
+        AvatarDTO avatarDTO)
     {
         AdministratorDTO admindto = new AdministratorDTO()
         {

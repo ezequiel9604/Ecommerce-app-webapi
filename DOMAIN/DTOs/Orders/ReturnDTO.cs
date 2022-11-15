@@ -10,9 +10,10 @@ public class ReturnDTO
 
     public string? Reason { get; set; }
 
-    public string? Condition { get; set; } // None, Returning, Returned
+    public char? Condition { get; set; } // [N]one, [P]rogress, [R]eturned
 
-    public static ReturnDTO Create(int id, int amount, string reason, string condition, PurchaseDTO purchaseDTO)
+    public static ReturnDTO Create(int id, int amount, string reason, char condition, 
+        PurchaseDTO purchaseDTO)
     {
         ReturnDTO returndto = new ReturnDTO()
         {

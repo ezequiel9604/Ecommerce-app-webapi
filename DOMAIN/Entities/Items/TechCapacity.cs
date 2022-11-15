@@ -12,6 +12,16 @@ public class TechCapacity
     [StringLength(6)]
     public string? Capacity { get; set; }
 
+    public static TechCapacity Create(int id, string capacity)
+    {
+        TechCapacity techcapacity = new TechCapacity()
+        {
+            ID = id,
+            Capacity = capacity
+        };
+
+        return techcapacity;
+    }
 
     public List<Item>? Items { get; set; }
 

@@ -1,5 +1,4 @@
 ﻿
-using Domain.Entities.Customers;
 using Domain.Entities.Items;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,14 +13,16 @@ public class Purchase
     [Required]
     public int Amount { get; set; }
 
-    public static Purchase Create(int id, int amount, int subitemid, int orderid)
+    public static Purchase Create(int id, int amount, Subitem subitem, Order order)
     {
         Purchase purchase = new Purchase()
         {
             ID = id,
             Amount = amount,
-            SubitemID = subitemid,
-            OrderID = orderid
+            Subitem = subitem,
+            SubitemID = subitem.ID,
+            Order = order,
+            OrderID = order.ID,
         };
 
         return purchase;

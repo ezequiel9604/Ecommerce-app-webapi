@@ -23,8 +23,8 @@ public class OrderDTO
 
     public char? Status { get; set; } // [I]ntransit, [D]elivered, [C]anceled
 
-    public static OrderDTO Create(int id, DateTime orderdate, DateTime arrivaldate, double total, double descount, 
-        double subtotal, string note, char paymentmethod, char status, CustomerDTO customerDTO, ShipmentMethodDTO shipmentMethodDTO)
+    public static OrderDTO Create(int id, DateTime orderdate, DateTime arrivaldate, double total, double descount, double subtotal, 
+        string note, char paymentmethod, char status, CustomerDTO customerDTO, ShipmentMethodDTO shipmentMethodDTO)
     {
         OrderDTO orderdto = new OrderDTO()
         {

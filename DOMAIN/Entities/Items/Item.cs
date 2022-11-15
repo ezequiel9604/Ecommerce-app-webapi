@@ -11,22 +11,25 @@ public class Item : IAggregateRoot
     public int ID { get; set; }
 
     [Required]
-    [StringLength(200)]
+    [StringLength(150)]
     public string? Title { get; set; }
 
     [Required]
     [StringLength(int.MaxValue)]
     public string? Description { get; set; }
 
-    public static Item Create(int id, string title, string description, int brandid, int categoryid)
+    public static Item Create(int id, string title, string description, 
+        Brand brand, Category category)
     {
         Item item = new Item()
         {
             ID = id,
             Title = title,
             Description = description,
-            BrandID = brandid,
-            CategoryID = categoryid
+            BrandID = brand.ID,
+            Brand = brand,
+            CategoryID = category.ID,
+            Category = category
         };
 
         return item;

@@ -14,7 +14,8 @@ public class CommentDTO
 
     public char State { get; set; } // [V]isible, [N]ovisible
 
-    public static CommentDTO Create(int id, string text, DateOnly date, CustomerDTO customerDTO, ItemDTO itemDTO)
+    public static CommentDTO Create(int id, string text, DateOnly date, 
+        CustomerDTO customerDTO, ItemDTO itemDTO)
     {
         CommentDTO commentdto = new CommentDTO()
         {

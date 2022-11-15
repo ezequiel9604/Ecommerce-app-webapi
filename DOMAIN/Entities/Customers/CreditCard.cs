@@ -14,7 +14,7 @@ public class CreditCard
     public string? Number { get; set; }
 
     [Required]
-    [StringLength(40)]
+    [StringLength(35)]
     public string? Owner { get; set; }
 
     [Required]
@@ -25,7 +25,8 @@ public class CreditCard
     public DateOnly Expiry { get; set; }
 
 
-    public static CreditCard Create(int id, string number, string owner, string code, DateOnly expiry, int customerid)
+    public static CreditCard Create(int id, string number, string owner, string code, DateOnly expiry, 
+        Customer customer)
     {
         CreditCard creditCard = new CreditCard()
         {
@@ -34,7 +35,8 @@ public class CreditCard
             Owner = owner,
             Code = code,
             Expiry = expiry,
-            CustomerID = customerid
+            CustomerID = customer.ID,
+            Customer = customer
         };
 
         return creditCard;

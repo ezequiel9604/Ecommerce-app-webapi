@@ -17,11 +17,11 @@ public class Return
     public string? Reason { get; set; }
 
     [Required]
-    [StringLength(12)]
-    public string? Condition { get; set; } // None, Returning, Returned
+    public char? Condition { get; set; } // [N]one, [P]rogress, [R]eturned
 
 
-    public static Return Create(int id, int amount, string reason, string condition, Purchase purchase)
+    public static Return Create(int id, int amount, string reason, char condition, 
+        Purchase purchase)
     {
         Return returndto = new Return()
         {
@@ -29,7 +29,8 @@ public class Return
             Amount = amount,
             Reason = reason,
             Condition = condition,
-            Purchase = purchase
+            Purchase = purchase,
+            PurchaseID = purchase.ID
         };
 
         return returndto;

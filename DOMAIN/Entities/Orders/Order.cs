@@ -37,7 +37,7 @@ public class Order : IAggregateRoot
     public char? Status { get; set; } // [I]ntransit, [D]elivered, [C]anceled
 
     public static Order Create(int id, DateTime orderdate, DateTime arrivaldate, double total, double descount, double subtotal, 
-        string note, char paymentmethod, char status, int customerid, int shipmentid, int ordercreditcardid)
+        string note, char paymentmethod, char status, Customer customer, ShipmentMethod ship)
     {
         Order order = new Order()
         {
@@ -50,9 +50,10 @@ public class Order : IAggregateRoot
             Note = note,
             PaymentMethod = paymentmethod,
             Status = status,
-            CustomerID = customerid,
-            ShipmentMethodID = shipmentid,
-            OrderCreditCardID = ordercreditcardid
+            CustomerID = customer.ID,
+            Customer = customer,
+            ShipmentMethodID = ship.ID,
+            ShipmentMethod = ship,
         };
 
         return order;

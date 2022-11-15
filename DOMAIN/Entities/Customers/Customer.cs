@@ -13,15 +13,15 @@ public class Customer : IAggregateRoot
     public int ID { get; set; }
 
     [Required]
-    [StringLength(30)]
+    [StringLength(25)]
     public string? FirstName { get; set; }
 
     [Required]
-    [StringLength(30)]
+    [StringLength(25)]
     public string? LastName { get; set; }
 
     [Required]
-    [StringLength(45)]
+    [StringLength(35)]
     public string? Email { get; set; }
 
     [Required]
@@ -36,7 +36,7 @@ public class Customer : IAggregateRoot
     public char? Type { get; set; } // [E]xpress or [N]ormal
 
     public static Customer Create(int id, string firstname, string lastname, string email, char type,
-        byte[] hash, byte[] salt, DateOnly birth, int avatarid)
+        byte[] hash, byte[] salt, DateOnly birth, Avatar avatar)
     {
 
         Customer customer = new Customer()
@@ -49,11 +49,11 @@ public class Customer : IAggregateRoot
             PasswordHash = hash,
             PasswordSalt = salt,
             DateOfBirth = birth,
-            AvatarID = avatarid
+            AvatarID = avatar.ID,
+            Avatar = avatar
         };
 
         return customer;
-
     }
 
     public List<CreditCard>? CreditCards { get; set; }
@@ -71,6 +71,5 @@ public class Customer : IAggregateRoot
 
     public int AvatarID { get; set; }
     public Avatar? Avatar { get; set; }
-
 
 }

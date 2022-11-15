@@ -12,13 +12,15 @@ public class Phone
     [StringLength(12)]
     public string? Number { get; set; }
 
-    public static Phone Create(int id, string number, int customerid)
+    public static Phone Create(int id, string number, 
+        Customer customer)
     {
         Phone phone = new Phone()
         {
             ID = id,
             Number = number,
-            CustomerID = customerid
+            CustomerID = customer.ID,
+            Customer = customer
         };
 
         return phone;

@@ -13,8 +13,8 @@ public class ItemDTO
     public string? Description { get; set; }
 
 
-    public static ItemDTO Create(int id, string title, string description, BrandDTO brandDTO, 
-        CategoryDTO categoryDTO, List<ImageDTO> imageDTOs, List<SubitemDTO> subitemDTOs)
+    public static ItemDTO Create(int id, string title, string description, 
+        BrandDTO brandDTO, CategoryDTO categoryDTO)
     {
         ItemDTO itemdto = new ItemDTO()
         {
@@ -22,9 +22,7 @@ public class ItemDTO
             Title = title,
             Description = description,
             BrandDTO = brandDTO,
-            CategoryDTO = categoryDTO,
-            ImageDTOs = imageDTOs,
-            SubitemDTOs = subitemDTOs
+            CategoryDTO = categoryDTO
         };
 
         return itemdto;

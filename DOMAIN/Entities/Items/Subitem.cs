@@ -21,7 +21,8 @@ public class Subitem
     [Required]
     public char State { get; set; } // [N]ew, [U]sed, [R]epair
 
-    public static Subitem Create(int id, double price, double desc, int stock, char state, int itemid, int colorid)
+    public static Subitem Create(int id, double price, double desc, int stock, char state, 
+        Item item, Color color)
     {
         Subitem subitem = new Subitem()
         {
@@ -30,8 +31,10 @@ public class Subitem
             Descount = desc,
             Stock = stock,
             State = state,
-            ItemID = itemid,
-            ColorID = colorid
+            Item = item,
+            ItemID = item.ID,
+            Color = color,
+            ColorID = color.ID
         };
 
         return subitem;

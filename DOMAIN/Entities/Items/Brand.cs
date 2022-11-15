@@ -14,7 +14,7 @@ public class Brand
     public string? Name { get; set; }
 
     [Required]
-    [StringLength(60)]
+    [StringLength(80)]
     public string? ImagePath { get; set; }
 
 

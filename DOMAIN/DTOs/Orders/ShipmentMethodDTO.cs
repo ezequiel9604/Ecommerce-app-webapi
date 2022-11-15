@@ -6,11 +6,11 @@ public class ShipmentMethodDTO
 
     public int ID { get; set; }
 
-    public string? Status { get; set; } // express, normal
+    public char? Status { get; set; } // [E]xpress, [N]ormal
 
     public double Price { get; set; }
 
-    public static ShipmentMethodDTO Create(int id, string status, double price)
+    public static ShipmentMethodDTO Create(int id, char status, double price)
     {
         ShipmentMethodDTO returndto = new ShipmentMethodDTO()
         {

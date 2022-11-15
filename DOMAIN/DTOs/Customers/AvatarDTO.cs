@@ -5,7 +5,6 @@ namespace Domain.DTOs.Customers;
 
 public class AvatarDTO
 {
-
     public int ID { get; set; }
 
     public string? Path { get; set; }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities.Orders;
 
@@ -8,11 +9,22 @@ public class ShipmentMethod
     public int ID { get; set; }
 
     [Required]
-    [StringLength(8)]
-    public string? Status { get; set; } // express, normal
+    public char? Status { get; set; } // [E]xpress, [N]ormal
 
     [Required]
     public double Price { get; set; }
+
+    public static ShipmentMethod Create(int id, char status, double price)
+    {
+        ShipmentMethod returndto = new ShipmentMethod()
+        {
+            ID = id,
+            Status = status,
+            Price = price
+        };
+
+        return returndto;
+    }
 
     public List<Order>? Orders { get; set; }
 

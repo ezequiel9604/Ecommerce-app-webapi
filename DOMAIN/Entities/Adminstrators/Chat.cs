@@ -22,7 +22,8 @@ public class Chat
     [Required]
     public char Sender { get; set; } // [C]ustomer, [A]dmin
 
-    public static Chat Create(int id, string text, DateTime date, bool isread, char sender, int customerid, int adminid)
+    public static Chat Create(int id, string text, DateTime date, bool isread, char sender, 
+        Customer customer, Administrator admin)
     {
         Chat chat = new Chat()
         {
@@ -31,8 +32,10 @@ public class Chat
             Date = date,
             Sender = sender,
             IsRead = isread,
-            CustomerID = customerid,
-            AdministratorID = adminid
+            CustomerID = customer.ID,
+            Customer = customer,
+            AdministratorID = admin.ID,
+            Administrator = admin,
         };
 
         return chat;

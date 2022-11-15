@@ -17,14 +17,15 @@ public class Image
     [StringLength(4)]
     public string? Type { get; set; }
 
-    public static Image Create(int id, string path, string type, int itemid)
+    public static Image Create(int id, string path, string type, Item item)
     {
         Image img = new Image()
         {
             ID = id,
             Path = path,
             Type = type,
-            ItemID = itemid
+            ItemID = item.ID,
+            Item = item
         };
 
         return img;

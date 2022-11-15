@@ -22,14 +22,18 @@ public class Comment : IAggregateRoot
     public char State { get; set; } // [V]isible, [N]ovisible
 
 
-    public static Comment Create(int id, string text, DateOnly date, int customerid)
+    public static Comment Create(int id, string text, DateOnly date, 
+        Customer customer, Item item)
     {
         Comment comment = new Comment()
         {
             ID = id,
             Text = text,
             Date = date,
-            CustomerID = customerid,
+            CustomerID = customer.ID,
+            Customer = customer,
+            ItemID = item.ID,
+            Item = item
         };
 
         return comment;
