@@ -18,12 +18,12 @@ public class CustomerDTO
 
     public string? Password { get; set; }
 
-    public DateOnly DateOfBirth { get; set; }
+    public DateTime DateOfBirth { get; set; }
 
     public char? Type { get; set; } // [E]xpress or [N]ormal
 
     public static CustomerDTO Create(int id, string firstname, string lastname, string email,
-        string password, DateOnly birth, AvatarDTO avatarDTO)
+        string password, DateTime birth, AvatarDTO avatarDTO)
     {
 
         CustomerDTO customerdto = new CustomerDTO()

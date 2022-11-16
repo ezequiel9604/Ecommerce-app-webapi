@@ -23,6 +23,6 @@ public class TechSize
         return techsize;
     }
 
-    public List<Item>? Items { get; set; }
+    public List<Subitem>? Subitems { get; set; }
 
 }

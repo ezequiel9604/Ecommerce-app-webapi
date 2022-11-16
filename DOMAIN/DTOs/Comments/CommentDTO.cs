@@ -10,11 +10,11 @@ public class CommentDTO
 
     public string? Text { get; set; }
 
-    public DateOnly Date { get; set; }
+    public DateTime Date { get; set; }
 
     public char State { get; set; } // [V]isible, [N]ovisible
 
-    public static CommentDTO Create(int id, string text, DateOnly date, 
+    public static CommentDTO Create(int id, string text, DateTime date, 
         CustomerDTO customerDTO, ItemDTO itemDTO)
     {
         CommentDTO commentdto = new CommentDTO()

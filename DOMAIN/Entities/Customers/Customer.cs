@@ -30,13 +30,13 @@ public class Customer : IAggregateRoot
     [Required]
     public byte[]? PasswordSalt { get; set; }
 
-    public DateOnly DateOfBirth { get; set; }
+    public DateTime DateOfBirth { get; set; }
 
     [Required]
     public char? Type { get; set; } // [E]xpress or [N]ormal
 
     public static Customer Create(int id, string firstname, string lastname, string email, char type,
-        byte[] hash, byte[] salt, DateOnly birth, Avatar avatar)
+        byte[] hash, byte[] salt, DateTime birth, Avatar avatar)
     {
 
         Customer customer = new Customer()

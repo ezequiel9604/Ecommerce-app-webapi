@@ -21,9 +21,9 @@ public class OrderCreditCard
     public string? Code { get; set; }
 
     [Required]
-    public DateOnly Expiry { get; set; }
+    public DateTime Expiry { get; set; }
 
-    public static OrderCreditCard Create(int id, string number, string owner, string code, DateOnly expiry)
+    public static OrderCreditCard Create(int id, string number, string owner, string code, DateTime expiry)
     {
         OrderCreditCard card = new OrderCreditCard()
         {

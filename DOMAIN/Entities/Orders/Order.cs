@@ -23,10 +23,6 @@ public class Order : IAggregateRoot
     [Required]
     public double Descount { get; set; }
 
-    [Required]
-    public double Subtotal { get; set; }
-
-    [Required]
     [StringLength(100)]
     public string? Note { get; set; }
 
@@ -36,7 +32,7 @@ public class Order : IAggregateRoot
     [Required]
     public char? Status { get; set; } // [I]ntransit, [D]elivered, [C]anceled
 
-    public static Order Create(int id, DateTime orderdate, DateTime arrivaldate, double total, double descount, double subtotal, 
+    public static Order Create(int id, DateTime orderdate, DateTime arrivaldate, double total, double descount, 
         string note, char paymentmethod, char status, Customer customer, ShipmentMethod ship)
     {
         Order order = new Order()
@@ -46,7 +42,6 @@ public class Order : IAggregateRoot
             ArrivaledDate = arrivaldate,
             Total = total,
             Descount = descount,
-            Subtotal = subtotal,
             Note = note,
             PaymentMethod = paymentmethod,
             Status = status,

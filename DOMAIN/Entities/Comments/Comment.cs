@@ -16,13 +16,13 @@ public class Comment : IAggregateRoot
     public string? Text { get; set; }
 
     [Required]
-    public DateOnly Date { get; set; }
+    public DateTime Date { get; set; }
 
     [Required]
     public char State { get; set; } // [V]isible, [N]ovisible
 
 
-    public static Comment Create(int id, string text, DateOnly date, 
+    public static Comment Create(int id, string text, DateTime date, 
         Customer customer, Item item)
     {
         Comment comment = new Comment()

@@ -10,12 +10,49 @@ and several patterns and principal that comes with the DDD architecture. This pr
 
 ![Entity-Relationship Diagram](https://raw.githubusercontent.com/ezequiel9604/Ecommerce-app-webapi/main/resources/ecommerce-app-webapi.png)
 
+## Packages:
+Before anything you will need to download these packages needed for the differents libraries that forms this project.
+
+Library: ```bash ./API/```
+
+```bash
+	dotnet add package AutoMapper --version 12.0.0
+	dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 12.0.0
+	dotnet add package Microsoft.EntityFrameworkCore --version 7.0.0
+	dotnet add package Microsoft.EntityFrameworkCore.Design --version 7.0.0
+	dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.0
+```
+
+Library: ```bash ./Domain/```
+
+```bash
+	dotnet add package AutoMapper --version 12.0.0
+	dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 12.0.0
+```
+
+Library: ```bash ./Infrastructure/```
+
+```bash
+	dotnet add package Microsoft.EntityFrameworkCore --version 7.0.0
+	dotnet add package Microsoft.EntityFrameworkCore.Design --version 7.0.0
+	dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.0
+	dotnet add package Microsoft.EntityFrameworkCore.Tools --version 7.0.0
+```
+
+## Prepare the migrations:
+To made the migrations to the database execute the following code:
+
+```bash
+	dotnet-ef migrations add InitialMigrations --project ..\Infrastructure.csproj --startup-project ..\..\API\API.csproj
+	dotnet-ef database update --project ..\Infrastructure.csproj --startup-project ..\..\API\API.csproj
+```
+
 ## Build and Run the app:
 In order to run the app first you need to go to ./Ecommerce_app_webapi/API and then:
 
 ```bash
-dotnet build
-dotnet run
+	dotnet build
+	dotnet run
 ```
 
 ## Contributing

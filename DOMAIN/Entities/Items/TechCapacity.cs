@@ -23,6 +23,6 @@ public class TechCapacity
         return techcapacity;
     }
 
-    public List<Item>? Items { get; set; }
+    public List<Subitem>? Subitems { get; set; }
 
 }

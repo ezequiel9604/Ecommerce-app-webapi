@@ -51,5 +51,4 @@ public class Address
     public int CustomerID { get; set; }
     public Customer? Customer { get; set; }
 
-
 }

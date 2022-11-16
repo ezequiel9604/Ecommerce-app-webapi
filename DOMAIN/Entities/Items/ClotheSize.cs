@@ -23,6 +23,6 @@ public class ClotheSize
         return clothesize;
     }
 
-    public List<Item>? Items { get; set; }
+    public List<Subitem>? Subitems { get; set; }
 
 }

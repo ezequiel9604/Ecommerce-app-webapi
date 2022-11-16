@@ -12,10 +12,10 @@ public class CreditCardDTO
 
     public string? Code { get; set; }
 
-    public DateOnly Expiry { get; set; }
+    public DateTime Expiry { get; set; }
 
 
-    public static CreditCardDTO Create(int id, string number, string owner, string code, DateOnly expiry, 
+    public static CreditCardDTO Create(int id, string number, string owner, string code, DateTime expiry, 
         CustomerDTO customerDTO)
     {
         CreditCardDTO creditCarddto = new CreditCardDTO()

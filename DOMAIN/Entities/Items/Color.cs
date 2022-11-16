@@ -24,6 +24,6 @@ public class Color
         return color;
     }
 
-    public List<Item>? Items { get; set; }
+    public List<Subitem>? Subitems { get; set; }
 
 }
